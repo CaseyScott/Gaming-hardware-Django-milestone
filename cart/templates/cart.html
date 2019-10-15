@@ -2,6 +2,8 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
 {% block content %}
 <div class="row row-flex">
     {% for item in cart_items %}
@@ -19,23 +21,25 @@
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">Qty</div>
+                        <div class="input-group">
+                            <div class="input-group-addon">Qty</div>
                             <input name="quantity" type="number" min="0" max="999" class="form-control">
-                            <div class="input-group-append">{{item.quantity}}</div>
+                            <div class="input-group-addon">{{item.quantity}}</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"><span class="fa fa-pencil-square-o" aria-hidden="true">Amend</span></button>
+                    <button type="submit" class="btn btn-primary"><span class="fa fa-pencil-square-o"
+                            aria-hidden="true">Update</span></button>
                 </form>
             </p>
         </div>
     </div>
     {% endfor %}
 </div>
-<div class="row">
+<div class="row row-flex total">
     <p>Total</p>
     <p><span class="fa fa-usd" aria-hidden="true"></span>{{ total }}</p>
-    <a href="/" class="btn btn-success" role="button"><span class="fa fa-check-circle"" aria-hidden="true"></span>Checkout</a>
+    <a href="/" class="btn btn-success" role="button"><span class="fa fa-check-circle"" aria-hidden="
+            true"></span>Checkout</a>
 </div>
 
 {% endblock %}

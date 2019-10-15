@@ -1,117 +1,132 @@
 {% load staticfiles %}
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Gaming Hardware</title>
 
-        <!-- CSS Bootstrap 4.3.1 --> 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-        <!-- CSS link to style.css -->
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
-    </head>
-    <body>
-        <div id="page-container">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gaming Hardware</title>
+
+    <!-- CSS Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <!-- CSS link to style.css -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+</head>
+
+<body>
+    <div id="page-container">
         <div id="content-wrap">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Gaming Hardware</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    {% if user.is_authenticated %}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Gaming Hardware</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                         </li>
-                    {% else %}
+                        {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'registration' %}">Register</a>
                         </li>
-                    {% endif %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Department
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Video Cards</a>
-                        <a class="dropdown-item" href="#">Hard Drives</a>
-                        <a class="dropdown-item" href="#">Memory</a>
-                        <a class="dropdown-item" href="#">CPU</a>
-                        <a class="dropdown-item" href="#">Cases</a>
-                        <a class="dropdown-item" href="#">Cooling by Water</a>
-                        <a class="dropdown-item" href="#">Cooling by Air</a>
-                        <a class="dropdown-item" href="#">Mother Boards</a>
-                        <a class="dropdown-item" href="#">Power Supplies</a>
-                        <a class="dropdown-item" href="#">Misc</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Need help choosing</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{% url 'view_cart' %}">
-                            <i class="fa fa-shopping-cart"></i> Cart
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
-                        </a>
-                    </li>
-                </ul>
-                <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+                        {% endif %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Department
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Video Cards</a>
+                                <a class="dropdown-item" href="#">Hard Drives</a>
+                                <a class="dropdown-item" href="#">Memory</a>
+                                <a class="dropdown-item" href="#">CPU</a>
+                                <a class="dropdown-item" href="#">Cases</a>
+                                <a class="dropdown-item" href="#">Cooling by Water</a>
+                                <a class="dropdown-item" href="#">Cooling by Air</a>
+                                <a class="dropdown-item" href="#">Mother Boards</a>
+                                <a class="dropdown-item" href="#">Power Supplies</a>
+                                <a class="dropdown-item" href="#">Misc</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Need help choosing</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{% url 'view_cart' %}">
+                                <i class="fa fa-shopping-cart"></i> Cart
+                                {% if product_count > 0 %}
+                                <label class="badge badge-warning">{{ product_count }}</label>
+                                {% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                    <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
 
-        <h1>
-            {% block page_heading %}{% endblock %}
-        </h1>
+            <h1>
+                {% block page_heading %}{% endblock %}
+            </h1>
 
 
-        {% if messages %}
-        <div>
-            {% for message in messages %}
+            {% if messages %}
+            <div>
+                {% for message in messages %}
                 {{ message }}
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% block content %}
-        {% endblock %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
- 
-        <footer class="bg-dark text-white mt-4" id="footer">
-            <div class="container-fluid py-3">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h5>Footer</h5></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3"></div>
+
+    <footer class="bg-dark text-white mt-4" id="footer">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Footer</h5>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">I stay at the bottom of the viewport! <span class="small"><br>Unless the page content pushes me further.</span></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3 text-right small align-self-end">©2017 Brand, Inc.</div>
-                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col-md-6">I stay at the bottom of the viewport! <span class="small"><br>Unless the page
+                        content pushes me further.</span></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3 text-right small align-self-end">©2017 Brand, Inc.</div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- JS Bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JS Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
-    </body>
+</body>
+
 </html>
