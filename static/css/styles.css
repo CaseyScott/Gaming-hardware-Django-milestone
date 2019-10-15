@@ -18,12 +18,52 @@
 
 /*----------------------------------------------------------------Sticky footer */
 
-
+/* forms for sign in and registration */
 form {
     width: 50%;
     margin: 0 auto;
 }
 
+/* cards for products */
+
+/* product image in cards */
+.product {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+caption p {
+    word-wrap: break-word;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
 .card {
+    border-color: black;
+    padding: 0 10px;
     margin-left: 30px;
+}
+
+.card-body {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.product-description {
+    min-height: 40px;
+}
+/* Qty box */
+.input-group-prepend,
+.input-group-append {
+    margin-right: -1px;
+    background-color: #e9ecef;
+    border-color: black;
 }
