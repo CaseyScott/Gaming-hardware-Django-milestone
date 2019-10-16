@@ -10,7 +10,7 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=40, blank=False)
     street_address1 = models.CharField(max_length=40, blank=False)
     street_address2 = models.CharField(max_length=40, blank=False)
-    Region = models.CharField(max_length=40, blank=False)
+    region = models.CharField(max_length=40, blank=False)
     date = models.DateField()
 
     def __str__(self):
