@@ -1,1 +1,1 @@
-web: gunicorn gaming-hardware-milestone4.wsgi:application
+web: gunicorn django_ms4.wsgi:application
