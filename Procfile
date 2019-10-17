@@ -1,0 +1,1 @@
+web: gunicorn gaming-hardware-milestone4.wsgi:application
