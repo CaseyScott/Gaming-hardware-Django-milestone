@@ -9,4 +9,5 @@ $(document).ready(function(){
                 $('.count').val(1);
             }
         });
+        $('.carousel').carousel()
  });
