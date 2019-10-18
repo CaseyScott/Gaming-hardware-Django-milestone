@@ -52,7 +52,7 @@
                                 Department
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Video Cards</a>
+                                <a class="dropdown-item" href="{% url 'products' %}">Video Cards</a>
                                 <a class="dropdown-item" href="#">Hard Drives</a>
                                 <a class="dropdown-item" href="#">Memory</a>
                                 <a class="dropdown-item" href="#">CPU</a>
@@ -94,7 +94,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-            
+
             {% block content %}
             {% endblock %}
         </div>
@@ -131,6 +131,7 @@
     </script>
     {% block head_js %}
     {% endblock head_js %}
+    
 </body>
 
 </html>

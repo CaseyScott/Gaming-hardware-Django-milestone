@@ -58,4 +58,13 @@ caption p {
 }
 
 
-   
+.carousel {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40vh;
+    width: 100%;
+}
