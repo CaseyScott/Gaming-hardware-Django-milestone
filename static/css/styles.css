@@ -34,9 +34,15 @@ a {
 /* nav bar */
 
 /* forms for sign in and registration */
-form {
-    width: 50%;
+.loginregForm {
+    width: 40%;
 }
+
+
+/* .search-bar {
+    margin-right: 5em;
+} */
+
 
 /* cards for products */
 
