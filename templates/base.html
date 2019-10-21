@@ -21,8 +21,10 @@
 <body>
     <div id="page-container">
         <div id="content-wrap">
-
+            <!--Navbar-->
             <nav class="navbar navbar-expand-lg">
+
+                <!-- Navbar brand -->
                 <a class="navbar-brand" href="{% url 'index' %}">Glitch Gaming</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,9 +32,12 @@
                     <i class="fa fa-bars fa-lg nav-button"></i>
                 </button>
 
+                <!-- Collapsible content -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         {% if user.is_authenticated %}
+
+                        <!-- Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +50,8 @@
                             </div>
                         </li>
                         {% else %}
+
+                        <!-- Links -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
                         </li>
@@ -60,6 +67,8 @@
                                 {% endif %}
                             </a>
                         </li>
+
+                        <!-- Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,6 +91,8 @@
                         </li>
                 </div>
                 </ul>
+
+                <!-- Search Bar -->
                 <div class="search-bar">
                     <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">

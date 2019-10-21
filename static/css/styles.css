@@ -21,8 +21,9 @@
     background-color: #0d4f77;
 }
 
-a {
-    color: #fefefe;
+.navbar-brand,
+.nav-link {
+    color: #fff;
 }
 
 .navbar-toggler {
