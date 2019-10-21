@@ -2,7 +2,7 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
-<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
 
 {% block content %}
 <div class="row row-flex">
@@ -23,7 +23,7 @@
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
                         <div class="input-group">
                             <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control">
+                            <input name="quantity" type="number" min="0" max="10" class="form-control">
                             <div class="input-group-addon">{{item.quantity}}</div>
                         </div>
                     </div>

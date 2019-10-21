@@ -1,27 +1,34 @@
-{% extends 'base.html' %}
+  {% extends 'base.html' %}
+  {% block page_title %}Glitch Gaming{% endblock %}
+  {% block page_heading %}Glitch Gaming - Shop{% endblock %}
+  {% block content %}
 
-{% block content %}
-<div class="row row-flex">
-    {% for product in products %}
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 card">
-        <div class="card-body">
-            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+  <div class="card-deck">
+      {% for product in products %}
+      <div class="col-card col-lg-4">
+          <div class="card card-list text-center">
+              <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+              <div class="card-body">
+                  <h5>{{ product.name }}</h5>
+                  <p class="product-description">{{ product.description }}</p>
+                  <p>${{ product.price }}</p>
+              </div>
+              <div class="card-footer">
+                  <a href="#" class="btn stretched-link">Click For Details</a>
+              </div>
+          </div>
+          <form method="post" action="{% url 'add_to_cart' product.id %}">
+              {% csrf_token %}
+              <div class="container">
+                  <div class="input-group">
+                      <span class="input-group-btn detail-button">
+                          <button class="btn btn-success cart-add" type="submit">Add To Cart</button>
+                      </span>
+                  </div>
+              </div>
+          </form>
+      </div>
+      {% endfor %}
+  </div>
 
-            <h3>{{ product.name }}</h3>
-            <p class="product-description">{{ product.description }}</p>
-            <p>${{ product.price }}</p>
-
-            <form method="post" action="{% url 'add_to_cart' product.id %}">
-                {% csrf_token %}
-                <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
-                    <span class="input-group-btn">
-                        <button class="btn btn-success" type="submit">Add</button>
-                    </span>
-                </div>
-            </form>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% endblock %}
+  {% endblock %}
