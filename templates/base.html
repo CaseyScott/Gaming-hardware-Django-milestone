@@ -19,107 +19,109 @@
 </head>
 
 <body>
-    <div id="page-container">
-        <div id="content-wrap">
-            <!--Navbar-->
-            <nav class="navbar navbar-expand-lg">
+    <div class="bg-color">
 
-                <!-- Navbar brand -->
-                <a class="navbar-brand" href="{% url 'index' %}">Glitch Gaming</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="fa fa-bars fa-lg nav-button"></i>
-                </button>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg">
 
-                <!-- Collapsible content -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        {% if user.is_authenticated %}
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="{% url 'index' %}">Glitch Gaming</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars fa-lg nav-button"></i>
+            </button>
 
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-user"></i> {{user}}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'profile' %}">User Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
-                            </div>
-                        </li>
-                        {% else %}
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {% if user.is_authenticated %}
 
-                        <!-- Links -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'registration' %}">Register</a>
-                        </li>
-                        {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'view_cart' %}">
-                                <i class="fa fa-shopping-cart"></i> Cart
-                                {% if product_count > 0 %}
-                                <label class="badge badge-warning">{{ product_count }}</label>
-                                {% endif %}
-                            </a>
-                        </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user"></i> {{user}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'profile' %}">User Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+                        </div>
+                    </li>
+                    {% else %}
 
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-cogs"></i> Department
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'products' %}">Video Cards</a>
-                                <a class="dropdown-item" href="#">Hard Drives</a>
-                                <a class="dropdown-item" href="#">Memory</a>
-                                <a class="dropdown-item" href="#">CPU</a>
-                                <a class="dropdown-item" href="#">Cases</a>
-                                <a class="dropdown-item" href="#">Cooling by Water</a>
-                                <a class="dropdown-item" href="#">Cooling by Air</a>
-                                <a class="dropdown-item" href="#">Mother Boards</a>
-                                <a class="dropdown-item" href="#">Power Supplies</a>
-                                <a class="dropdown-item" href="#">Misc</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Need help choosing</a>
-                            </div>
-                        </li>
-                </div>
-                </ul>
+                    <!-- Links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'registration' %}">Register</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'view_cart' %}">
+                            <i class="fa fa-shopping-cart"></i> Cart
+                            {% if product_count > 0 %}
+                            <label class="badge badge-warning">{{ product_count }}</label>
+                            {% endif %}
+                        </a>
+                    </li>
 
-                <!-- Search Bar -->
-                <div class="search-bar">
-                    <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-
-            </nav>
-
-            <h1>
-                {% block page_heading %}{% endblock %}
-            </h1>
-
-
-            {% if messages %}
-            <div>
-                {% for message in messages %}
-                {{ message }}
-                {% endfor %}
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cogs"></i> Department
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'products' %}">Video Cards</a>
+                            <a class="dropdown-item" href="#">Hard Drives</a>
+                            <a class="dropdown-item" href="#">Memory</a>
+                            <a class="dropdown-item" href="#">CPU</a>
+                            <a class="dropdown-item" href="#">Cases</a>
+                            <a class="dropdown-item" href="#">Cooling by Water</a>
+                            <a class="dropdown-item" href="#">Cooling by Air</a>
+                            <a class="dropdown-item" href="#">Mother Boards</a>
+                            <a class="dropdown-item" href="#">Power Supplies</a>
+                            <a class="dropdown-item" href="#">Misc</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Need help choosing</a>
+                        </div>
+                    </li>
             </div>
-            {% endif %}
+            </ul>
 
-            {% block content %}
-            {% endblock %}
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+        <h1>
+            {% block page_heading %}{% endblock %}
+        </h1>
+
+
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
         </div>
-    </div>
+        {% endif %}
 
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+
+    <!-- End of page container -->
+
+    <!-- Footer -->
     <footer class="bg-dark text-white mt-4" id="footer">
         <div class="container-fluid py-3">
             <div class="row">
@@ -140,10 +142,9 @@
     </footer>
 
     <!-- JS Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
