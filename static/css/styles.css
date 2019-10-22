@@ -1,5 +1,7 @@
 /* Sticky footer styles
 -------------------------------------------------- */
+
+
 /* #page-container {
     position: relative;
     background-color: #f7f7f9;
@@ -16,17 +18,31 @@
     display: block;           
 } */
 
+.list-unstyled {
+    font-size: 1.5rem;
+}
+
 /*----------------------------------------------------------------Sticky footer */
-html, body {
-    height: 100%;
+html,
+body {
+    height: 100vh;
     margin: 0;
     background-color: #f7f7f9;
+    margin-top: 30px;
 }
 
 
 /* nav bar */
 .navbar {
     background-color: #0d4f77;
+}
+
+.fixed-top {
+    padding: 3px 12px;
+}
+
+.navbar-brand {
+    margin-left: 50px;
 }
 
 .navbar-brand,
@@ -39,6 +55,18 @@ html, body {
     border: 1px solid #000;
 }
 
+/*search bar */
+.search-bar {
+    margin-right: 50px;
+}
+
+.form-control {
+    width: 83%;
+}
+
+.navbar-toggler {
+margin-right: 40px;
+}
 
 /* nav bar */
 
@@ -99,14 +127,13 @@ caption p {
     margin: auto;
 }
 
-.container{
-    position: absolute;
+.container {
     padding-top: 1em;
 }
 
 /* home page carousel */
 .carousel-control-next-icon,
-.carousel-control-prev-icon  {
+.carousel-control-prev-icon {
     background-color: black;
     width: 50px;
     height: 50px;
@@ -121,10 +148,11 @@ caption p {
     font-size: 25px;
     font-weight: 700;
     line-height: 30px;
-    padding: 0 2px
-    ;min-width: 35px;
+    padding: 0 2px;
+    min-width: 35px;
     text-align: center;
 }
+
 .qty .plus {
     cursor: pointer;
     display: inline-block;
@@ -132,10 +160,11 @@ caption p {
     color: white;
     width: 30px;
     height: 30px;
-    font: 30px/1 Arial,sans-serif;
+    font: 30px/1 Arial, sans-serif;
     text-align: center;
     border-radius: 50%;
-    }
+}
+
 .qty .minus {
     cursor: pointer;
     display: inline-block;
@@ -143,35 +172,42 @@ caption p {
     color: white;
     width: 30px;
     height: 30px;
-    font: 30px/1 Arial,sans-serif;
+    font: 30px/1 Arial, sans-serif;
     text-align: center;
     border-radius: 50%;
     background-clip: padding-box;
 }
+
 div {
     text-align: center;
 }
-.minus:hover{
+
+.minus:hover {
     background-color: #717fe0 !important;
 }
-.plus:hover{
+
+.plus:hover {
     background-color: #717fe0 !important;
 }
+
 /*Prevent text selection*/
-span{
+span {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
-input{  
+
+input {
     border: 0;
     width: 2%;
 }
+
 nput::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-input:disabled{
-    background-color:white;
+
+input:disabled {
+    background-color: white;
 }

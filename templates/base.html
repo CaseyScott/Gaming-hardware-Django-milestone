@@ -22,7 +22,7 @@
     <div class="bg-color">
 
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg fixed-top">
 
             <!-- Navbar brand -->
             <a class="navbar-brand" href="{% url 'index' %}">Glitch Gaming</a>
@@ -32,10 +32,10 @@
             </button>
 
             <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    {% if user.is_authenticated %}
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex justify-content-end">
 
+                    {% if user.is_authenticated %}
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -88,15 +88,17 @@
                             <a class="dropdown-item" href="#">Need help choosing</a>
                         </div>
                     </li>
-            </div>
-            </ul>
 
-            <!-- Search Bar -->
-            <div class="search-bar">
-                <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                </ul>
+
+                <!-- Search Bar -->
+                <div class="search-bar ml-auto">
+                    <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </form>
+                </div>
             </div>
         </nav>
 
@@ -117,29 +119,28 @@
         {% block content %}
         {% endblock %}
     </div>
-    
-
     <!-- End of page container -->
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white mt-4" id="footer">
-        <div class="container-fluid py-3">
-            <div class="row">
-                <div class="col-md-3">
-                    <h5>Footer</h5>
-                </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">I stay at the bottom of the viewport! <span class="small"><br>Unless the page
-                        content pushes me further.</span></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3 text-right small align-self-end">©2017 Brand, Inc.</div>
+    <!--- Footer --->
+    <div class="navbar">
+        <div class="container" id="footer">
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item"><a class="btn-floating mx-1" href="#" target="_blank"><i
+                            class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a class="btn-floating mx-1" href="#" target="_blank"><i
+                            class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a class="btn-floating mx-1" href="#" target="_blank"><i
+                            class="fa fa-youtube"></i></a></li>
+                <li class="list-inline-item"><a class="btn-floating mx-1" href="#" target="_blank"><i
+                            class="fa fa-instagram"></i></a></li>
+            </ul>
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
             </div>
         </div>
-    </footer>
+    </div>
+    
+    <!-- Footer -->
+
 
     <!-- JS Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
