@@ -10,12 +10,15 @@
               <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
               <div class="card-body">
                   <h5>{{ product.name }}</h5>
-                  <p class="product-description">{{ product.description }}</p>
+                  <p class="product-description text-truncate">{{ product.description }}</p>
                   <p>${{ product.price }}</p>
               </div>
+
+              <!-- Read More link to detailed view page -->
               <div class="card-footer">
-                  <a href="#" class="btn stretched-link">Click For Details</a>
+                  <a href="{% url 'item_detail' product.id %}" class="btn stretched-link">Read More</a>
               </div>
+              
           </div>
           <form method="post" action="{% url 'add_to_cart' product.id %}">
               {% csrf_token %}

@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Favicon-->
-    <link rel="shortcut icon" type="image/png" href="#" />
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/plasticine/100/000000/monitor.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <!-- CSS link to style.css -->
-    <link rel="stylesheet" href='/static/css/styles.css' type="text/css">
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>  
+    <!--{% static 'css/styles.css' %} /static/css/styles.css-->
 </head>
 
 <!--Navbar-->
@@ -41,7 +43,7 @@
         {% block content %}
         {% endblock %}
     </div>
-
+    <a href="https://icons8.com/icon/67385/monitor"></a>
     <!--- Footer --->
     {% include "footer.html" %}
 

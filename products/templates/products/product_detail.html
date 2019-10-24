@@ -1,23 +1,23 @@
 {% extends 'base.html' %} 
 
-{% block page_title %}{{ product.name }}{% endblock %}
+{% block page_title %}{{ object.name }}{% endblock %}
 
-{% block page_heading %}{{ product.name }}{% endblock %}
+{% block page_heading %}{{ object.name }}{% endblock %}
 
 {% block content %}
 
 <a href="{% url 'products' %}" class="btn btn-dark back-button">Back To Shop</a>
 <div class="row">
     <div class="col-md-6">
-        <img class="detail-img card-img-top img-fluid" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
+        <img class="detail-img card-img-top img-fluid" style="background-image: url('{{ MEDIA_URL }}{{ object.image }}')">
     </div>
     <div class="col-md-6 text-center">
-        <h5 class="detail-title">{{ product.name }}</h5>
+        <h5 class="detail-title">{{ object.name }}</h5>
         <hr class="break1">
-        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">{{ object.description }}</p>
         <hr class="break2">
-        <p>${{ product.price }}</p>
-        <form method="post" action="{% url 'add_to_cart' product.id %}">
+        <p>${{ object.price }}</p>
+        <form method="post" action="{% url 'add_to_cart' object.id %}">
             {% csrf_token %}
             <div class="input-group detail-button">
                 <span class="input-group-btn">
