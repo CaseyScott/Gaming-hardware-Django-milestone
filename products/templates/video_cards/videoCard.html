@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block page_title %}Glitch Gaming{% endblock %}
+{% block page_heading %}Glitch Gaming - Video Cards{% endblock %}
+{% block content %}
+
+<div class="card-deck text-center">
+    {% for product in products %}
+    <div class="col-card col-lg-4">
+        <div class="card card-list text-center">
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+            <div class="card-body">
+                  
+                <h5>{{ product.name }}</h5>
+                <!-- <p class="product-description text-truncate">{{ product.description }}</p> -->
+                <p><strong>${{ product.price }}</strong></p>
+            </div>
+            
+            <h5 class="detail-title">Category: {{ product.get_category_display }}</h5>
+            <!-- Read More link to detailed view page -->
+            <div class="card-footer">
+                <a href="{% url 'item_detail' product.id %}" class="btn stretched-link">Read More</a>
+            </div>
+            
+        </div>
+        <form method="post" action="{% url 'add_to_cart' product.id %}">
+            {% csrf_token %}
+            <div class="container">
+                <div class="input-group">
+                    <span class="input-group-btn detail-button">
+                        <button class="btn btn-success cart-add" type="submit">Add To Cart</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<!-- /.container -->
+
+{% endblock %}

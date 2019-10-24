@@ -9,3 +9,11 @@ def all_products(request):
 
 class ItemDetailView(DetailView):
     model = Product
+
+
+def video_cards(request):
+    videoCards = Product.objects.all()
+    return render(request, "videoCards.html", {"videoCards": videoCards})
+
+class ItemVideoCardDetailView(DetailView):
+    model = Product

@@ -19,6 +19,9 @@ from home import urls as urls_home
 from home.views import index
 from accounts import urls as urls_accounts
 from products import urls as urls_products
+
+# from videoCards import urls as urls_videoCards
+
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
@@ -33,6 +36,9 @@ urlpatterns = [
     url(r'^home/', include(urls_home)),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
+
+    # url(r'^videoCards/', include(urls_videoCards)),
+
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
     url(r'^checkout/', include(urls_checkout)),
