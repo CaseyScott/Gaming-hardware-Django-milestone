@@ -63,6 +63,10 @@ footer {
     margin-right: 50px;
 }
 
+.fa-search:before {
+    color: #fff;
+}
+
 .form-control {
     width: 83%;
 }
@@ -75,7 +79,7 @@ margin-right: 40px;
 
 /* forms for sign in and registration */
 .loginregForm {
-    width: 40%;
+    margin: 0 auto;
 }
 
 /* cards for products */
@@ -142,6 +146,12 @@ caption p {
     height: 50px;
 }
 
+.carousel-indicators {
+    background-color: lightgrey;
+    width: 25%;
+    margin: 0 auto;
+}
+
 
 /* plus and minus counter */
 .qty .count {
@@ -202,7 +212,7 @@ span {
 
 input {
     border: 0;
-    width: 2%;
+    width: 60%;
 }
 
 nput::-webkit-outer-spin-button,
@@ -213,4 +223,114 @@ input::-webkit-inner-spin-button {
 
 input:disabled {
     background-color: white;
+}
+
+
+/* checkout */
+
+.btn-primary {
+    margin-top: 1.5em;
+    border-radius: .3rem;
+    width: 70%;
+}
+
+.form-group {
+    margin:0 auto;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.container mt-4 pl-4 {
+    margin: 0 auto;
+}
+
+.checkout-items, col-lg-4 {
+    margin: 0 auto;
+}
+
+.price-total, mt-4 {
+    margin: 0 auto;
+}
+
+/* enquiry */
+
+.btn.btn-enquiry {
+    margin-top: 1.5em;
+    border-radius: .3rem;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.container-fluid {
+    margin-top: 5em;
+}
+
+.contact {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: grey;
+    color: black;
+    font-size: 20px;
+    margin: 0px;
+    padding: 20px;
+}
+
+.center-form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#form {
+    margin-top: 20px;
+}
+
+#form>input {
+    margin: 0 auto;
+    width: 45vw;
+    height: 30px;
+    text-align: center;
+}
+
+#form>textarea {
+    height: 80px;
+    width: 45vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn.btn-enquiry {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* carousel images */
+.carousel-image {
+    width: 400px;
+}
+
+
+/* cart */
+.remove {
+    border: 0;
+    background: inherit;
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-primary-cart-update {
+    border-radius: .3rem;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.btn-primary-checkout {
+    margin-top: 1.5em;
+    border-radius: .3rem;
+    color: #fff;
+    background-color: #007bff;
 }

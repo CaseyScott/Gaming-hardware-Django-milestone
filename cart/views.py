@@ -32,3 +32,15 @@ def adjust_cart(request, id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+
+
+def remove_item_cart(request, id):
+    """
+    Remove the whole specified product from the cart
+    """
+    quantity = int(request.POST['remove'])
+    cart = request.session.get('cart', {})
+    cart.pop(str(id))
+    request.session['cart'] = cart
+
+    return redirect(reverse('view_cart'))

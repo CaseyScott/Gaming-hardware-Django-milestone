@@ -3,17 +3,15 @@ from django.views.generic import DetailView
 from .models import Product
 
 
-def all_products(request):
-    products = Product.objects.all()
-    return render(request, "products.html", {"products": products})
-
 class ItemDetailView(DetailView):
     model = Product
 
 
-def video_cards(request):
-    videoCards = Product.objects.all()
-    return render(request, "videoCards.html", {"videoCards": videoCards})
+def all_products(request):
+    products = Product.objects.all()
+    return render(request, "products.html", {"products": products})
 
-class ItemVideoCardDetailView(DetailView):
-    model = Product
+
+def video_cards(request):
+    videoCards = Product.objects.video_cards()
+    return render(request, "videoCard.html", {"videoCards": videoCards})

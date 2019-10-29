@@ -52,7 +52,8 @@
 
                 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{% url 'products' %}">Video Cards</a>
+                    <a class="dropdown-item" href="{% url 'products' %}">Products</a>
+                    <a class="dropdown-item" href="{% url 'videoCards' %}">Video Cards</a>
                     <a class="dropdown-item" href="{% url 'products' %}">Hard Drives</a>
                     <a class="dropdown-item" href="{% url 'products' %}">Memory</a>
                     <a class="dropdown-item" href="{% url 'products' %}">CPU</a>
@@ -60,8 +61,6 @@
                     <a class="dropdown-item" href="{% url 'products' %}">Cooling</a>
                     <a class="dropdown-item" href="{% url 'products' %}">Mother Boards</a>
                     <a class="dropdown-item" href="{% url 'products' %}">Power Supplies</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Need help choosing</a>
                 </div>
                 
             </li>
@@ -71,7 +70,7 @@
         <div class="search-bar ml-auto">
             <form action="{% url 'search' %}" method="get" class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" name="q" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
     </div>
