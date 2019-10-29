@@ -4,10 +4,10 @@
 {% block content %}
 
 <div class="card-deck text-center">
-    {% for videoCards in products %}
+    {% for products in hardware_products %}
     <div class="col-card col-lg-4">
         <div class="card card-list text-center">
-            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ videoCards.image }}')"></div>
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
             <div class="card-body">
                   
                 <h5>{{ videoCards.name }}</h5>
@@ -15,14 +15,14 @@
                 <p><strong>${{ product.price }}</strong></p>
             </div>
             
-            <h5 class="detail-title">Category: {{ videoCards.get_category_display }}</h5>
+            <h5 class="detail-title">Category: {{ product.get_category_display }}</h5>
             <!-- Read More link to detailed view page -->
             <div class="card-footer">
-                <a href="{% url 'video_card_detail' videoCards.id %}" class="btn stretched-link">Read More</a>
+                <a href="{% url 'video_card_detail' product.id %}" class="btn stretched-link">Read More</a>
             </div>
             
         </div>
-        <form method="post" action="{% url 'add_to_cart' videoCards.id %}">
+        <form method="post" action="{% url 'add_to_cart' product.id %}">
             {% csrf_token %}
             <div class="container">
                 <div class="input-group">
