@@ -26,6 +26,7 @@ body {
 body {
     min-height: 100%;
     padding-bottom:60px;   /* Height of the footer */
+    background-color: #007bff1a;
 }
 
 footer {
@@ -75,7 +76,42 @@ footer {
 margin-right: 40px;
 }
 
-/* nav bar */
+/* jumbotron */
+.jumbotron {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),url("https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/glitch-2463363_1280.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    margin-top: 2em;
+}
+
+.jumbotron_text {
+    color: #fff;
+}
+.jumbotron_lower {
+    margin-top: 2em;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),url("https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/glitch+face.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    border-radius: 7px;
+    margin: 30px;
+}
+
+/* .card.homepage-card {
+    width: 15em;
+} */
+
+/*container withen jumbotron */
+/* .container {
+    color: #fff;
+} */
 
 /* forms for sign in and registration */
 .loginregForm {
@@ -122,7 +158,7 @@ caption p {
 }
 
 .card-body {
-    height: 100%;
+    color: black;
 }
 
 .product-description {
@@ -142,16 +178,20 @@ caption p {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     background-color: black;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 .carousel-indicators {
     background-color: lightgrey;
     width: 25%;
     margin: 0 auto;
+    bottom: -10px;
 }
 
+.carousel-image {
+    margin-bottom: 1em;
+}
 
 /* plus and minus counter */
 .qty .count {
@@ -333,4 +373,9 @@ input:disabled {
     border-radius: .3rem;
     color: #fff;
     background-color: #007bff;
+}
+
+/*email */
+.container-fluid {
+    margin-top: 9em;
 }
