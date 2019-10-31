@@ -105,6 +105,11 @@ margin-right: 40px;
 .jumbotron_text {
     color: #fff;
 }
+
+.my-4 {
+    background-color: #fff;
+}
+
 .jumbotron_lower {
     margin-top: 2em;
     background: 
@@ -156,6 +161,7 @@ caption p {
 
 .card {
     padding: 0 10px;
+    margin-bottom: 10px;
 }
 
 .col-card {
