@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg fixed-top">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="{% url 'index' %}">Glitch Gaming</a>
+    <a class="navbar-brand" href="{% url 'index' %}"><img class="Top-left-logo"
+        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/Glitchlogo.png"
+        alt="Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars fa-lg nav-button"></i>
@@ -53,7 +55,7 @@
                 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{% url 'products' %}">Products</a>
-                    <a class="dropdown-item" href="#">Video Cards</a>
+                    <a class="dropdown-item" href="{% url 'products' %}">Video Cards</a>
                     <a class="dropdown-item" href="#">Hard Drives</a>
                     <a class="dropdown-item" href="#">Memory</a>
                     <a class="dropdown-item" href="#">CPU</a>

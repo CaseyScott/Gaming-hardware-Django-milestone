@@ -76,6 +76,10 @@ footer {
 margin-right: 40px;
 }
 
+.Top-left-logo {
+    width: 150px;
+}
+
 /* jumbotron */
 .jumbotron {
     background: 
@@ -86,6 +90,16 @@ margin-right: 40px;
     background-size: cover;
     opacity: 0.7;
     margin-top: 2em;
+}
+
+.logo-image {
+    width: 450px;
+}
+
+@media only screen and (max-width: 490px) {
+    .logo-image {
+        width: 300px;
+    }
 }
 
 .jumbotron_text {
@@ -142,7 +156,6 @@ caption p {
 
 .card {
     padding: 0 10px;
-    margin-left: 30px;
 }
 
 .col-card {
