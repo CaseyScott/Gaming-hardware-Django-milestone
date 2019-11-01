@@ -6,6 +6,11 @@ from .models import Product
 class ItemDetailView(DetailView):
     model = Product
 
-def all_products(request, requestedCategory):
-    products = Product.objects.filter(category=requestedCategory)
+
+def all_products(request):
+    products = Product.objects.all()
     return render(request, "products.html", {"products": products})
+
+# def filter_products(request, requestedCategory):
+#     products = Product.objects.filter(category=requestedCategory)
+#     return render(request, "products.html", {"products": products})

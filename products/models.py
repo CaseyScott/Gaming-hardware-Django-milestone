@@ -1,15 +1,5 @@
 from django.db import models
 
-# CATEGORY_CHOICES = (
-#     ('Video Cards', 'Video cards'),
-#     ('Hard drives', 'Hard drives'),
-#     ('Memory', 'Memory'),
-#     ('CPU', 'CPU'),
-#     ('Cooling', 'Cooling'),
-#     ('Motherboards', 'Motherboards'),
-#     ('Power supplies', 'Power supplies')
-# )
-
 CATEGORY_CHOICES = (
     ('V', 'Video cards'),
     ('H', 'Hard drives'),
