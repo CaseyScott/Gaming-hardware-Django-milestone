@@ -10,7 +10,6 @@ from django.db import models
 #     ('Power supplies', 'Power supplies')
 # )
 
-
 CATEGORY_CHOICES = (
     ('V', 'Video cards'),
     ('H', 'Hard drives'),
