@@ -9,7 +9,7 @@
 <h5 class="detail-title">Category: {{ object.get_category_display }}</h5>
 
 <!-- return button takes user back to products -->
-<a href="{% url 'products' %}" class="btn btn-dark back-button">Back To Shop</a>
+<a href="{% url 'index' %}" class="btn btn-dark">Back To Shop</a>
 
 
 <div class="row">
@@ -18,9 +18,9 @@
     </div>
     <div class="col-md-6 text-left">
         <h5 class="detail-title">{{ object.name }}</h5>
-        <hr class="break1">
+        <hr class="">
         <p class="card-text">{{ object.description|linebreaks }}</p>
-        <hr class="break2">
+        <hr class="">
         <p><strong>${{ object.price }}</strong></p>
         <form method="post" action="{% url 'add_to_cart' object.id %}">
             {% csrf_token %}

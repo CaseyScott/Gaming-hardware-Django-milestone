@@ -6,8 +6,7 @@ CATEGORY_CHOICES = (
     ('M', 'Memory'),
     ('C', 'CPU'),
     ('CL', 'Cooling'),
-    ('MB', 'Motherboards'),
-    ('P', 'Power supplies')
+    ('MB', 'Motherboards')
 )
 
 class Product(models.Model):
