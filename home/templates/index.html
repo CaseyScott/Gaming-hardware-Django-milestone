@@ -32,50 +32,61 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <a class="banner-links" href="{% url 'filter_products' 'M' %}">
                     <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/ram.jpg"
+                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/trans-ram.png"
                         alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Memory</h5>
+                    </div>
             </div>
             <div class="carousel-item">
                 <a class="banner-links" href="{% url 'filter_products' 'CL' %}">
                     <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/cooling.jpg"
+                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/trans-cooling.png"
                         alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Cooling Air and Water</h5>
+                    </div>
             </div>
             <div class="carousel-item">
                 <a class="banner-links" href="{% url 'filter_products' 'MB' %}">
                     <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/mobo.jpg"
+                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/trans-mobo.png"
                         alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <a class="banner-links" href="{% url 'filter_products' 'P' %}">
-                    <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/psu.jpg"
-                        alt="Fourth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Motherboards</h5>
+                    </div>
             </div>
             <div class="carousel-item">
                 <a class="banner-links" href="{% url 'filter_products' 'C' %}">
                     <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/cpu.jpg"
+                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/trans-CPU.png"
                         alt="Fifth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>CPU</h5>
+                    </div>
             </div>
             <div class="carousel-item">
                 <a class="banner-links" href="{% url 'filter_products' 'V' %}">
                     <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/2080tiWater.jpg"
+                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/trans-GPU.png"
                         alt="Sixth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Video Cards</h5>
+                    </div>
             </div>
             <div class="carousel-item">
                 <a class="banner-links" href="{% url 'filter_products' 'H' %}">
                     <img class="carousel-image"
-                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/nvme-m2-ssd.jpg"
+                        src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/trans-ssd.png"
                         alt="Seveth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Storage</h5>
+                    </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -91,7 +102,7 @@
     <div class="jumbotron">
         <div class="jumbotron_text">
             <div class="container">
-                <h1 class="display-4">Leading Brands</h1>
+                <h1 class="display-4"><strong>Leading Brands</strong></h1>
                 <p class="lead">The future in PC Gaming
                 </p>
 
@@ -126,11 +137,10 @@
                             <img src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/nvidia.jpg"
                                 width="100" height="250" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
+                                <h5 class="card-title">Nvidia</h5>
+                                <p class="card-text">The way it's meant to be played.
                                 </p>
-                                <a href="#" class="btn btn-primary">Offical Site</a>
+                                <a href="https://www.nvidia.com/en-us/" class="btn btn-primary">Offical Site</a>
                             </div>
                         </div>
                     </div>
@@ -139,11 +149,11 @@
                             <img src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/radeon.jpg"
                                 width="100" height="250" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
+                                <h5 class="card-title">Radeon</h5>
+                                <p class="card-text">Radeon everywhere.
                                 </p>
-                                <a href="#" class="btn btn-primary">Offical Site</a>
+                                <a href="https://www.amd.com/en/graphics/radeon-rx-graphics"
+                                    class="btn btn-primary">Offical Site</a>
                             </div>
                         </div>
                     </div>
@@ -152,11 +162,10 @@
                             <img src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/razer.jpg"
                                 width="100" height="250" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
+                                <h5 class="card-title">Razer</h5>
+                                <p class="card-text">For Gamers. By Gamers.
                                 </p>
-                                <a href="#" class="btn btn-primary">Offical Site</a>
+                                <a href="https://www.razer.com/" class="btn btn-primary">Offical Site</a>
                             </div>
                         </div>
                     </div>
@@ -165,11 +174,10 @@
                             <img src="https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/corsair2.jpg"
                                 width="100" height="250" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
+                                <h5 class="card-title">Corsair</h5>
+                                <p class="card-text">Lets open other horizons.
                                 </p>
-                                <a href="#" class="btn btn-primary">Offical Site</a>
+                                <a href="https://www.corsair.com/us/en/" class="btn btn-primary">Offical Site</a>
                             </div>
                         </div>
                     </div>
@@ -181,13 +189,13 @@
     <section>
         <div class="container-fluid">
             <div class="center-form">
-                <form id="form" onsubmit="return sendMail(this);">
+                <form id="contactForm" onsubmit="return sendMail(this);" method="POST">{% csrf_token %}
                     <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress"
                         placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30"
                         required />
                     <input type="text" name="subject" class="form-control" id="name" placeholder="Subject" required />
-                    <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary"
+                    <textarea rows="5" name="pricingsummary" class="form-control" id="pricingsummary"
                         placeholder="Price Enquiries" required></textarea>
                     <button type="submit" class="btn btn-enquiry center-block">Submit</button>
                 </form>

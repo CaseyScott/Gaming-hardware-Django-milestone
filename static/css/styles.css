@@ -84,7 +84,7 @@ margin-right: 40px;
 .jumbotron {
     background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.8)
     ),url("https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/media/images/glitch-2463363_1280.jpg");
     background-size: cover;
@@ -122,15 +122,6 @@ margin-right: 40px;
     border-radius: 7px;
     margin: 30px;
 }
-
-/* .card.homepage-card {
-    width: 15em;
-} */
-
-/*container withen jumbotron */
-/* .container {
-    color: #fff;
-} */
 
 /* forms for sign in and registration */
 .loginregForm {
@@ -202,14 +193,30 @@ caption p {
 }
 
 .carousel-indicators {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     width: 25%;
     margin: 0 auto;
     bottom: -10px;
 }
 
+.carousel-indicators li {
+    background-color: black;
+}
+
 .carousel-image {
     margin-bottom: 1em;
+    width: 850px;
+}
+
+.carousel-caption {
+    color: #000;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .carousel-image {
+        width: 90%;
+    }
 }
 
 /* plus and minus counter */
@@ -364,11 +371,6 @@ input:disabled {
 .btn.btn-enquiry {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-/* carousel images */
-.carousel-image {
-    width: 400px;
 }
 
 
