@@ -24,8 +24,8 @@ class TestView(TestCase):
 class TestProfileView(TestCase):
 
     def test_get_profile_page(self):
-        user = User.objects.create_user(username='username',
-                                        password='password')
+        self.user = User.objects.create_user(username='username',
+                                             password='password')
         self.client.login(username='username', password='password')
         page = self.client.get('/accounts/profile/')
         self.assertEqual(page.status_code, 200)
