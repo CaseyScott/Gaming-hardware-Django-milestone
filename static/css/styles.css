@@ -78,7 +78,7 @@ footer {
 }
 
 .form-control {
-    width: auto;
+   
     display: inline;
 }
 
@@ -412,13 +412,22 @@ input:disabled {
     }
 }
 
-@media only screen and (max-width: 330px) {
-    .Top-left-logo
+@media only screen and (max-width: 576px) {
+    .form-inline 
     .form-control {
-        width: 100px;
-        width: 175px;
+    display: inline-block;
+    width: 180px;
+    vertical-align: middle;
     }
 }
+
+@media only screen and (max-width: 330px) {
+    .Top-left-logo {
+        width: 130px;
+    }
+}
+
+
 
 @media only screen and (max-width: 490px) {
     .logo-image {
@@ -426,9 +435,20 @@ input:disabled {
     }
 }
 
+@media only screen and (max-width: 370px) {
+    .logo-image {
+        width: 250px;
+    }
+}
 
 @media only screen and (max-width: 992px) {
     .carousel-image {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .btn-primary {
+        width: 9.5em;
     }
 }
