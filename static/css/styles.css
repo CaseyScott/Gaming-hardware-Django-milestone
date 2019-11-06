@@ -29,10 +29,19 @@ body {
     background-color: #007bff1a;
 }
 
+/*--------footer--*/
 footer {
     background-color: #0d4f779c;
  }
-/*----------------------------------------------------------------Sticky footer */
+
+ .pb-4 {
+     font-size: 1.75em;
+ }
+
+ a {
+     color: #0552a5;
+ }
+/*-------------------------------------------------- */
 
 
 
@@ -69,7 +78,8 @@ footer {
 }
 
 .form-control {
-    width: 83%;
+    width: auto;
+    display: inline;
 }
 
 .navbar-toggler {
@@ -78,6 +88,10 @@ margin-right: 40px;
 
 .Top-left-logo {
     width: 150px;
+}
+
+.form-inline, my-2, my-lg-0 {
+    justify-content: center;
 }
 
 /* jumbotron */
@@ -96,11 +110,7 @@ margin-right: 40px;
     width: 450px;
 }
 
-@media only screen and (max-width: 490px) {
-    .logo-image {
-        width: 300px;
-    }
-}
+
 
 .jumbotron_text {
     color: #fff;
@@ -127,6 +137,7 @@ margin-right: 40px;
 .loginregForm {
     margin: 0 auto;
 }
+
 
 /* cards for products */
 
@@ -213,11 +224,6 @@ caption p {
 }
 
 
-@media only screen and (max-width: 992px) {
-    .carousel-image {
-        width: 90%;
-    }
-}
 
 /* plus and minus counter */
 .qty .count {
@@ -297,15 +303,11 @@ input:disabled {
 .btn-primary {
     margin-top: 1.5em;
     border-radius: .3rem;
-    width: 70%;
+    width: 12.5em;
 }
 
 .form-group {
     margin:0 auto;
-}
-
-.form-control {
-    width: 100%;
 }
 
 .container mt-4 pl-4 {
@@ -399,4 +401,34 @@ input:disabled {
 /*email */
 .container-fluid {
     margin-top: 9em;
+}
+
+@media only screen and (max-width: 330px) {
+    .form-inline 
+    .form-control {
+    display: inline-block;
+    width: 180px;
+    vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .Top-left-logo
+    .form-control {
+        width: 100px;
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .logo-image {
+        width: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .carousel-image {
+        width: 90%;
+    }
 }

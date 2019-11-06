@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <!-- CSS link to style.css -->
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"  type="text/css" />
+    <link rel="stylesheet" href=/static/css/styles.css type="text/css" />
     <!-- "{% static 'css/styles.css' %}"   /static/css/styles.css-->
 
     <!-- References and initialises emailjs -->
@@ -52,7 +52,7 @@
         {% block content %}
         {% endblock %}
     </div>
-    <a href="https://icons8.com/icon/67385/monitor">Monitor icon by Icons8</a>
+
     <!--- Footer --->
     {% include "footer.html" %}
 
@@ -67,10 +67,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src=/static/js/script.js></script>
-
-    <!-- Sends emails on submit button using the contact form -->
-    <script src="/static/js/sendEmail.js" async></script>
+    <script type="text/javascript" src=/static/js/script.js> </script> <!-- Sends emails on submit button using the
+        contact form -->
+    <script src = "/static/js/sendEmail.js"
+        async >
+    </script>
 
     {% block head_js %}
     {% endblock head_js %}
