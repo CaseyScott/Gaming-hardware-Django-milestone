@@ -9,7 +9,7 @@
 <h5 class="detail-title">Category: {{ object.get_category_display }}</h5>
 
 <!-- return button takes user back to products -->
-<a href="{% url 'index' %}" class="btn btn-dark">Back To Shop</a>
+<a href="{% url 'filter_products' 'M' %}" class="btn btn-info">Back to {{ object.get_category_display }}</a>
 
 
 <div class="row">
