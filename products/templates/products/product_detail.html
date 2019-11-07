@@ -1,28 +1,28 @@
 {% extends 'base.html' %} 
 
-{% block page_title %}{{ object.name }}{% endblock %}
+{% block page_title %}{{ product.name }}{% endblock %}
 
-{% block page_heading %}{{ object.name }}{% endblock %}
+{% block page_heading %}{{ product.name }}{% endblock %}
 
 {% block content %}
 
-<h5 class="detail-title">Category: {{ object.get_category_display }}</h5>
+<h5 class="detail-title">Category: {{ product.get_category_display }}</h5>
 
 <!-- return button takes user back to products -->
-<a href="{% url 'filter_products' 'M' %}" class="btn btn-info">Back to {{ object.get_category_display }}</a>
+<a href="{% url 'filter_products' product.category %}" class="btn btn-info">Back to {{ product.get_category_display }}</a>
 
 
 <div class="row">
     <div class="col-md-6">
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ object.image }}')"></div>
+        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
     </div>
     <div class="col-md-6 text-left">
-        <h5 class="detail-title">{{ object.name }}</h5>
+        <h5 class="detail-title">{{ product.name }}</h5>
         <hr class="">
-        <p class="card-text">{{ object.description|linebreaks }}</p>
+        <p class="card-text">{{ product.description|linebreaks }}</p>
         <hr class="">
-        <p><strong>${{ object.price }}</strong></p>
-        <form method="post" action="{% url 'add_to_cart' object.id %}">
+        <p><strong>${{ product.price }}</strong></p>
+        <form method="post" action="{% url 'add_to_cart' product.id %}">
             {% csrf_token %}
             <div class="input-group detail-button">
                 <span class="input-group-btn">
