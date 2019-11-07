@@ -2,9 +2,16 @@
 
 {% block page_title %}{{ user }}'s Profile{% endblock %}
 
-{% block page_heading %}{{ user }}'s Profile{% endblock %}
-
 {% block content %}
-<p>{{ profile.email }}</p>
-<h3>Previous purchased items:</h3>
+
+<div class="container">
+    <h2 class="text-center mt-4 mb-4">Welcome {{ user }}</h2>
+    <p><b>Email:</b> {{ profile.email }}</p>
+    <p><b>Username:</b> {{ user }}</p>
+    <a class="btn btn-danger" href="{% url 'password_reset' %}">Change your password</a>
+    <div class="text-center mt-4">
+          <a class="btn btn-info" href="{% url 'index' %}">back to home</a>
+    </div>
+</div>
+
 {% endblock %}
