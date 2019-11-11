@@ -228,7 +228,16 @@ caption p {
 .carousel-caption {
     color: #000;
 }
+ /* product detail view */
 
+ .product-detail {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 22em;
+    height: 20em;
+    margin: 0 auto;
+}
 
 
 /* plus and minus counter */
