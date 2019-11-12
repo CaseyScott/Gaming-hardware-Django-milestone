@@ -177,4 +177,5 @@ EMAIL_HOST_USER = os.getenv('EMAIL_ADDRESS', 'ENV Value Not Loaded')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD', 'ENV Value Not Loaded')
 EMAIL_PORT = 587
 
-EMAIL_JS_KEY = os.getenv('EMAIL_JS_KEY', 'ENV Value Not Loaded')
+EMAIL_JS_KEY = os.getenv('EMAIL_JS_KEY')
+# EMAIL_JS_KEY = os.environ.get('EMAIL_JS_KEY')

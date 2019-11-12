@@ -2,6 +2,19 @@
 {% load staticfiles %}
 {% block page_title %}Glitch Gaming{% endblock %}
 
+{% block head_js %}
+<!-- References and initialises emailjs -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    (function () {
+        emailjs.init("EMAIL_JS_KEY");  
+        // 'user_GCHVOlpEBe6SjyOS0HZNL' This will be deleted once the env var works
+    })();
+</script>
+<script type="text/javascript" src="{% static 'js/sendEmail.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 
 <main>
@@ -192,7 +205,7 @@
     <section>
         <div class="container-fluid">
             <div class="center-form">
-                <form id="contactForm" onsubmit="return sendMail(this);" method="POST">{% csrf_token %}
+                <form id="form1" onsubmit="return sendMail(this);" method="POST">{% csrf_token %}
                     <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress"
                         placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30"
