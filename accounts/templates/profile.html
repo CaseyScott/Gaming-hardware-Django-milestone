@@ -8,9 +8,18 @@
     <h2 class="text-center mt-4 mb-4">Welcome {{ user }}</h2>
     <p><b>Email:</b> {{ profile.email }}</p>
     <p><b>Username:</b> {{ user }}</p>
+
+    <h3>Your Order:</h3>
+    {% for order in orders %}
+    <h4>Date Ordered: {{ order.date }}</h4>
+    <a class="#" href="#">
+        <h4>Order ID: {{ order.id }}</h4>
+    </a>
+    {% endfor %}
+
     <a class="btn btn-danger" href="{% url 'password_reset' %}">Change your password</a>
     <div class="text-center mt-4">
-          <a class="btn btn-info" href="{% url 'index' %}">back to home</a>
+        <a class="btn btn-info" href="{% url 'index' %}">back to home</a>
     </div>
 </div>
 

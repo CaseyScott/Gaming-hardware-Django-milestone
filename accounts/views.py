@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 
+from checkout.models import Order, OrderLineItem
 
 def index(request):
     """Return the index.html file"""
@@ -69,4 +70,6 @@ def registration(request):
 def user_profile(request):
     """The user's profile page"""
     user = User.objects.get(email=request.user.email)
+    # orders = user.profile.orders.all()
+
     return render(request, 'profile.html', {"profile": user})
