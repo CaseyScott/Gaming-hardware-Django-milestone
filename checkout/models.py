@@ -1,6 +1,6 @@
 from django.db import models
 from products.models import Product
-
+from accounts.models import Profile
 
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)

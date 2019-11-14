@@ -6,18 +6,28 @@
 
 <div class="container">
     <h2 class="text-center mt-4 mb-4">Welcome {{ user }}</h2>
-    <p><b>Email:</b> {{ profile.email }}</p>
+    <p><b>Email:</b> {{ user.email }}</p>
     <p><b>Username:</b> {{ user }}</p>
-
-    <h3>Your Order:</h3>
-    {% for order in orders %}
-    <h4>Date Ordered: {{ order.date }}</h4>
-    <a class="#" href="#">
-        <h4>Order ID: {{ order.id }}</h4>
-    </a>
-    {% endfor %}
-
     <a class="btn btn-danger" href="{% url 'password_reset' %}">Change your password</a>
+    <br>
+    <br>
+    <hr>
+    
+    <h3>Your Order will be sent to:</h3>
+    <p><b>Order ID:</b> {{ order.id }}</p>
+    <p><b>Name:</b> {{ order.full_name }}</p>
+    <p><b>Phone number:</b> {{ order.phone_number }}</p>
+    <p><b>Country:</b> {{ order.country }}</p>
+    <p><b>Postcode:</b> {{ order.postcode }}</p>
+    <p><b>Town or city:</b> {{ order.town_or_city }}</p>
+    <p><b>Address 1:</b> {{ order.street_address1 }}</p>
+    <p><b>Address 2:</b> {{ order.street_address2 }}</p>
+    <p><b>Region:</b> {{ order.region }}</p>
+    <p><b>Date Ordered:</b> {{ order.date }}</p>
+  
+    <hr>
+
+
     <div class="text-center mt-4">
         <a class="btn btn-info" href="{% url 'index' %}">back to home</a>
     </div>
