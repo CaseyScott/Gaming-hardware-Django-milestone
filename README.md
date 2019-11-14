@@ -8,29 +8,25 @@
 	- [**Glitch**](#Glitch)
 	- [**Given Brief**](#The-Given-Brief-and-Requirements)
 	- [**UX**](#ux)
-	   - [**User Stories**](#user-stories)
+	  - [**User Stories**](#user-stories)
       - [**Users**](#users)
-		- [**Existing features**](#existing-features)
-			- [Create account and log in](#Create-account-and-log-in)
-			- [Home page](#home-page)
-			- [Departments](#department)
-         - [detail-view page](#detail-view-page)
-         - [Navigation bar and footer](#navigation-barand-footer)
+	  - [**Wireframes**](#wireframes)
+	- [**Existing features**](#existing-features)
+		- [Create account and log in](#Create-account-and-log-in)
+		- [Home page](#home-page)
+		- [Departments](#department)
+		- [detail-view page](#detail-view-page)
+		- [Navigation bar and footer](#navigation-barand-footer)
 	- [**Features left to implement**](#features-left-to-implement)
-   - [**Wireframes**](#wireframes)
-   - [**Database**](#database)
+    - [**Database**](#database)
 	- [**Technologies used**](#technologies-used)
 	- [**Testing**](#testing)
 	- [**Deployment**](#deployment)
-	- [**How to run the project locally?**](#how-to-run-the-project-locally)
-	- [**How to get started**](#how-to-get-started)
-   - [**Code used**](#code-used)
-	- [**Credits**](#credits)
-		- [Special thanks to](#special-thanks-to)
-		- [Hardware data](#hardware-data)
-		- [Media](#media)
+	  - [**How to run the project locally?**](#how-to-run-the-project-locally)
+	  - [**Remote Deployment**](#remote-deployment)
 
-## **Glitch**
+
+# **Glitch**
 
 
 ## **The Given Brief and Requirements**
@@ -46,11 +42,15 @@ Glitch is an online high end gaming componet store for purchasing computer parts
 The site is simple to use with Most categories covered. People spending at this level of componentry know exactly the parts they need so it really just comes down to price. Having the best prices avaliable is what will bring customers coming back. There are also 6 pre-built options with the latest hardware at competitive prices.
 
 ## **User Stories**
-- As a user I want an online gaming store that has the best prices avaliable
+- As a user I want an online gaming store that has the best prices avaliable.
 - As a user I want to be able to contact the site to request a price comparison or beter.
-- As a user spending a lot from overseas stores costs to much with tax and duties, I want a NZ store that can compete with those prices
-- As a user I want a simple, easy to use site
+- As a user spending a lot from overseas stores costs to much with tax and duties, I want a NZ store that can compete with those prices.
+- As a user I want a simple, easy to use site.
 - As a user I want to know my credit card and email are safe. 
+- As a user I want to be able to create an account to sign in and out as a return customer.
+- As a user I want to be able to freely go from products to cart and continue shopping.
+- As a user I want a mobile friendly site.
+- As a user I want to update or delete from my cart.
 
 ### Users
 - Users of this site can browse all content without registiering but if a user wants to purchase they must be regisitered and signed in to complete this action.
@@ -72,7 +72,7 @@ The site is simple to use with Most categories covered. People spending at this 
 - return policy for damaged goods.
 - User comments on components instore.
 - Component compatibility feedback as the user adds items to cart.
-
+- More testing using coverage unit testing.
 
 ## Wireframes
 - [Home Page](https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/static/img/wireframes/HomePage.png)
@@ -82,6 +82,8 @@ The site is simple to use with Most categories covered. People spending at this 
 - [Department Brand Options](https://gaming-hardware-milestone.s3-ap-southeast-2.amazonaws.com/static/img/wireframes/CategoryCPU.png)
 
 ### Database
+Django by default uses SQlite3 database stored locally, When deploying on Heroku, heroku offers an add-on section in resources. Heroku Postgres is a managed SQL database service provided directly by Heroku. You can use a free Hobby Dev database.
+
 
 [**To top**](#Table-of-Contents)
 
@@ -90,24 +92,26 @@ The site is simple to use with Most categories covered. People spending at this 
 - HTML
 - CSS
 - JavaScript
-- Python / Django framework
-- Postgres relational database
-- SQLite3
-- Stripe
-- heroku
-- AWS S3
+- Python3
+- SQL
+
+## Frameworks / Libraries
+- Django
+- JQuery
+- bootstrap
+- Fontawesome
+- google fonts
 
 ## Tools
-- [Visual Studio Code](https://code.visualstudio.com/) code editor
-- [GitHub](https://github.com/) hosting
-- [Browserstack](https://www.browserstack.com/) testing all browsers and devices
-- [Git](https://www.atlassian.com/git/tutorials/install-git) version control
+- Visual Studio Code
+- Github
+- Browserstack
+- Git
+- Whitenoise
 
-## Libraries
-- [JQuery](https://jquery.com) to simplify DOM manipulation.
-- [Bootstrap](https://www.bootstrapcdn.com/) Simplify the structure of the website and make the website responsive easily.
-- [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) icons
-- [Google Fonts](https://fonts.google.com/) font styling
+## Database
+- SQlite3
+- PostgreSQL
 
 ## **Testing**
 ### Manual Testing
@@ -122,30 +126,44 @@ The site is simple to use with Most categories covered. People spending at this 
    - linkedin and githubs redirect correctly.
    - Title link goes to home page.
 
+#### Browser Testing 
+All testing on the list of Browers below.
+- Google Chrome
+- Firefox
+- Internet Explorer & Edge
+- Opera
+
+#### Responsive-Design testing
+Responsive testing done on Google DevTools – Device Mode and Browserstack.
+
 ### Automated testing
+- I used Travis the continuous integration service [![Build Status](https://travis-ci.org/CaseyScott/Gaming-hardware-Django-milestone.svg?branch=master)](https://travis-ci.org/CaseyScott/Gaming-hardware-Django-milestone)
+
 #### Using Django unit testing and coverage
-- Accounts ??%
-- Cart     ??%
-- Checkout ??%
-- Home     ??%
-- Products ??%
+- Accounts 75%
+- Cart     56%
+- Checkout 79%
+- Home     91%
+- Products 85%
 
 To run testing locally
 - pip install coverage
 - python manage.py test
 - coverage run --source='app name' manage.py test
+- coverage report
 - coverage html 
 htmlcov folder is created where you can run and view the browser version of the report.
    
-#### Browser Testing 
-All testing on the list of Browers below.
-- Google Chrome (no issues found at time of testing)
-- Firefox (issue with text-align:-webkit-center on single recipe page instructions should all be centered)
-- Internet Explorer & Edge (issue with text-align:-webkit-center on single recipe page instructions should all be centered)
-- Opera (no issues found at time of testing)
+#### Stripe payment testing
+- Card number - 4242424242424242
+- CVC - Any 3 digit number.
+- Expiry date - Any date in the future.
 
-#### Responsive-Design testing
-Responsive testing done on Google DevTools – Device Mode and Browserstack.
+#### Validation services
+- [HTML Validation]('https://validator.w3.org/')
+- [CSS Validation]('https://jigsaw.w3.org/css-validator/')
+- [Python Validation]('http://pep8online.com/')
+- python flake8 to format systematically
 
 ## **Deployment**
 This project is hosted on Github and a deployed verson hosted on Heroku
@@ -182,4 +200,5 @@ For this project I have used Heroku platform:
 - Set up [Stripe]('https://stripe.com/') from the Developers section use the STRIPE_PUBLISHABLE, STRIPE_SECRET keys and add them to .env file and heroku Config Vars.
 - You can set Automatic deploys from master branch so anything pushes made to github will keep the live version up to date.
 
-
+### Content
+- The images and product information used on my project was sourced from other online Computer stores and google image search. 
