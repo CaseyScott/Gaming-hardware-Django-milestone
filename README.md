@@ -31,10 +31,10 @@
 
 ## **The Given Brief and Requirements**
 Full stack frameworks with Django milestone project.
-Glitch is an e-commerce web app for selling high end gaming computer hardware.
+Glitch is an e-commerce website for selling high end gaming computer hardware.
 
 Project purpose:
-In this project, is a full-stack site based around business logic used to control a centrally-owned dataset. It has an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
+This project, is a full-stack site based around business logic used to control a centrally-owned dataset. It has an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
 
 ## **UX**
@@ -57,14 +57,26 @@ The site is simple to use with Most categories covered. People spending at this 
 
 ## Existing Features
 ### Create account and log in
-- Users can regisiter their details and sign in given them the ability to make purchases.
+- Users can regisiter their details and sign in giving them the ability to make purchases.
+### UserProfile
+- User is able to change there password from there profile page.
+- User can sign in and out
+- A user that is logged in has access to the user drop down in the nav bar that only shows to a signed in user.
 ### Home page
-- Home page shows categories avaliable in a drop down from the navbar or with carousel images that link to take category.
+- Home page shows categories avaliable in a drop down from the navbar or with carousel images that link to that category.
 - Pre-built machines for those that just want to pay and play.
 ### Departments
 - All avaliable components are in departments in their own categories.
 ### Navigation bar and footer
 - Navbar is on every page making it easy for the user to move around the site from category to category, use the search bar or return home at any time.
+### Cart
+- Cart displays all products in the users cart
+- Total price and allows the user to edit or remove items
+### Checkout
+- Users must log in to access the checkout page
+- Total price and order forms displayed before confirmation of payment
+- Stripe 4242 4242 4242 4242 credit card number for testing
+
 ## Features left to implement
 - Categories are hard coded at this stage. This list in real world situation would be a dynamic list so the administrator could change the list and add more categories as the company expands.
 - home page to have more information on products instore 
@@ -108,6 +120,9 @@ Django by default uses SQlite3 database stored locally, When deploying on Heroku
 - Browserstack
 - Git
 - Whitenoise
+- Heroku
+- Stripe
+- AWS S3 bucket
 
 ## Database
 - SQlite3
@@ -123,23 +138,23 @@ Django by default uses SQlite3 database stored locally, When deploying on Heroku
    - Typed text (data entry) scrolls and displays properly
    - Pages are readable on all resolutions.
    - Search by: button opens modal and searches each selector properly.
-   - linkedin and githubs redirect correctly.
+   - Social links redirect correctly.
    - Title link goes to home page.
 
-#### Browser Testing 
+### Browser Testing 
 All testing on the list of Browers below.
 - Google Chrome
 - Firefox
 - Internet Explorer & Edge
 - Opera
 
-#### Responsive-Design testing
+### Responsive-Design testing
 Responsive testing done on Google DevTools – Device Mode and Browserstack.
 
 ### Automated testing
 - I used Travis the continuous integration service [![Build Status](https://travis-ci.org/CaseyScott/Gaming-hardware-Django-milestone.svg?branch=master)](https://travis-ci.org/CaseyScott/Gaming-hardware-Django-milestone)
 
-#### Using Django unit testing and coverage
+#### Using Django coverage unit testing
 - Accounts 75%
 - Cart     56%
 - Checkout 79%
