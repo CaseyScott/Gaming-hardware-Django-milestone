@@ -1,6 +1,9 @@
 from django.db import models
 from products.models import Product
-from accounts.models import Profile
+# from accounts.models import Profile
+
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
 
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
@@ -12,6 +15,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=40, blank=False)
     region = models.CharField(max_length=40, blank=False)
     date = models.DateField()
+    # user = models.ForeignKey(User, on_delete=models.PROTECT, related_name='orders')
 
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
