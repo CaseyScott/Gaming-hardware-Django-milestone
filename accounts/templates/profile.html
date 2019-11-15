@@ -13,7 +13,10 @@
     <br>
     <hr>
     
+    {% for order in orders %}
+
     <h3>Your Order will be sent to:</h3>
+    <p><b>Date Ordered:</b> {{ order.date }}</p>
     <p><b>Order ID:</b> {{ order.id }}</p>
     <p><b>Name:</b> {{ order.full_name }}</p>
     <p><b>Phone number:</b> {{ order.phone_number }}</p>
@@ -23,8 +26,8 @@
     <p><b>Address 1:</b> {{ order.street_address1 }}</p>
     <p><b>Address 2:</b> {{ order.street_address2 }}</p>
     <p><b>Region:</b> {{ order.region }}</p>
-    <p><b>Date Ordered:</b> {{ order.date }}</p>
   
+    {% endfor %}
     <hr>
 
 
