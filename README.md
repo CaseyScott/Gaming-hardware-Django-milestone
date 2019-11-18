@@ -145,7 +145,7 @@ Django by default uses SQlite3 database stored locally, When deploying on Heroku
 All testing on the list of Browers below.
 - Google Chrome
 - Firefox
-- Internet Explorer & Edge
+- Internet Explorer & Edge (background color issues)
 - Opera
 
 ### Responsive-Design testing
@@ -216,4 +216,8 @@ For this project I have used Heroku platform:
 - You can set Automatic deploys from master branch so anything pushes made to github will keep the live version up to date.
 
 ### Content
-- The images and product information used on my project was sourced from other online Computer stores and google image search. 
+- The images and product information used on my project was sourced from other online Computer stores and google image search. I do not have rights or permission to use these images. This site is for educational purposes.
+
+## **Credits**
+### Special thanks to
+My Tutor and Mentor, Dick Vlaanderen and the Code Institute tutors for helping me this project.
