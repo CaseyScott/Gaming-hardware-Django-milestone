@@ -51,6 +51,7 @@ The site is simple to use with Most categories covered. People spending at this 
 - As a user I want to be able to freely go from products to cart and continue shopping.
 - As a user I want a mobile friendly site.
 - As a user I want to update or delete from my cart.
+- As a user I want order infomation linked to my profile to check the address is correct and an order to follow up.
 
 ### Users
 - Users of this site can browse all content without registiering but if a user wants to purchase they must be regisitered and signed in to complete this action.
@@ -62,6 +63,7 @@ The site is simple to use with Most categories covered. People spending at this 
 - User is able to change there password from there profile page.
 - User can sign in and out
 - A user that is logged in has access to the user drop down in the nav bar that only shows to a signed in user.
+- User can see their current order confirmation and where there order will be sent to.
 ### Home page
 - Home page shows categories avaliable in a drop down from the navbar or with carousel images that link to that category.
 - Pre-built machines for those that just want to pay and play.
@@ -80,7 +82,6 @@ The site is simple to use with Most categories covered. People spending at this 
 ## Features left to implement
 - Categories are hard coded at this stage. This list in real world situation would be a dynamic list so the administrator could change the list and add more categories as the company expands.
 - home page to have more information on products instore 
-- User feedback about where the completed purchase has been sent to with package tracking.
 - return policy for damaged goods.
 - User comments on components instore.
 - Component compatibility feedback as the user adds items to cart.
