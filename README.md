@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/CaseyScott/Gaming-hardware-Django-milestone.svg?branch=master)](https://travis-ci.org/CaseyScott/Gaming-hardware-Django-milestone)
 
-[Glitch Gaming](https://glitch-nz.herokuapp.com/) 
+[Glitch Gaming](https://glitch-nz.herokuapp.com/) Link to Live website.
 
 # **Table of Contents**
 
